@@ -1,13 +1,163 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: #ecad9e; */
+  /* background: #e1e5ea; */
+  background-color: #ecad9e;
+background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  padding: 15px;
+}
+
+/*
+** HEADER 
+*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  /* background: #171717; */
+  background-color: #db4c3f;
+
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.header .title {
+  /* color: #FFCE00; */
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header .title span {
+  color: black;
+  font-weight: 300;
+  
+}
+
+/*
+** NOTE FORM
+*/
+
+.noteform {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 15px;
+
+}
+.noteform h3 {
+  color: #171717;
+}
+.noteform .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  /* padding-top: 30px; */
+  font-weight: bold;
+  
+  
+}
+
+
+.noteform input{
+  /* margin: 30px; */
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
+  border-top: white;
+  border-left: white;
+  height: 30px;
+  /* background: ##f3f3f3; */
+  /* background: #fae0e4; */
+  /* border: 3px solid white; */
+  background: #f3f3f3;
+
+}
+.form-group textarea{
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0.5px grey;
+  border-top: white;
+  border-left: white;
+  height: 60px;
+  background: #f3f3f3;
+
+}
+
+.noteform button{
+  padding: 9px;
+  border-radius: 10px;
+  border-style: hidden;
+  background-color:#db4c3f;
+  color: white;
+  font-weight: bold;
+
+}
+.noteform button:hover{
+  background-color: #f54748;
+}
+
+
+
+
+
+/*
+** NOTES LIST
+*/
+.notes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  padding: 15px;
+}
+.notes .note {
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.notes .note .note-title {
+  /* background: #171717; */
+  /* background-color: #db4c3f; */
+  background-color: #db4c3f;
+
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes .note .note-title h3 {
+  /* color: #f3f3f3; */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.notes .note .note-title .remove {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.notes .note .note-content {
+  padding: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
