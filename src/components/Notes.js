@@ -13,7 +13,7 @@ export class Notes extends Component {
   render() {
     return (
       <section className="notes-wrapper">
-        <h3>Notes</h3>
+        <h3>Your Notes:</h3>
         <div className="notes">
           {this.props.notes.map(note => (
             <div className="note" key={note.id}>
